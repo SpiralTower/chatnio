@@ -18,7 +18,7 @@ export const marketEditableTags = [
   "image",
   "instruct",
   "math",
-  "adjust",
+  "professions",
 ];
 
 export const modelImages = [
