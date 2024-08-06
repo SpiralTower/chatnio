@@ -9,6 +9,16 @@ export const marketEditableTags = [
   "multi-modal",
   "fast",
   "english-model",
+  "translater",
+  "suggest",
+  "coder",
+  "roler",
+  "low-price",
+  "embedding",
+  "image",
+  "instruct",
+  "math",
+  "adjust",
 ];
 
 export const modelImages = [
