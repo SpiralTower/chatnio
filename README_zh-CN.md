@@ -8,7 +8,7 @@
 #### *“ Chat Nio > [Next Web](https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web) + [One API](https://github.com/songquanpeng/one-api) ”*
 
 
-[English](./README.md) · 简体中文 · [官网](https://chatnio.com) · [社区](https://chatnio.com/guide/#%F0%9F%9B%A0%EF%B8%8F-%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2) · [开发者资源](https://chatnio.com/developers)
+[English](./README.md) · 简体中文 · [文档](https://chatnio.com) · [Discord](https://discord.gg/rpzNSmqaF2) · [部署文档](https://chatnio.com/docs/deploy)
 
 
 [![Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/M86XJI)
@@ -42,20 +42,22 @@
 20. 🎫 **多种兑换码体系**: 支持多种兑换码体系，支持礼品码和兑换码，支持批量生成，礼品码适合宣传分发，兑换码适合发卡销售，礼品码一个类型的多个码一个用户仅能兑换一个码，在宣传中一定程度上减少一个用户兑换多次的情况😀
 21. 🥰 **商用友好协议**: 采用 **Apache-2.0** 开源协议, 商用二开 & 分发友好 (也请遵守 Apache-2.0 协议的规定, 请勿用于违法用途)
 
-> ### ✨ Chat Nio 专业版
+> ### ✨ Chat Nio 商业版
 > ![商业版预览](./screenshot/chatnio-pro.png)
-> - ✅ Midjourney Proxy Plus
-> - ✅ 更多支付方式 & 订单管理
-> - ✅ 安全审核
-> - ✅ 插件市场
-> - ✅ 模型监控
-> - ✅ 短信登录
-> - ✅ 推广奖励
-> - ✅ 商业级 UI
+>
+> - ✅ 美观商业级 UI, 漂亮的前端界面与后台管理
+> - ✅ 支持 TTS & STT, 插件市场, RAG 知识库等丰富功能与模块
+> - ✅ 更多支付供应商, 更多计费模式和高级订单管理
+> - ✅ 支持更多鉴权方式，包括短信登录、OAuth 登录等
+> - ✅ 支持模型监控，渠道健康检测，故障告警自动渠道切换
+> - ✅ 支持多租户 API Key 分发系统, 企业级令牌权限管理与访问者限制
+> - ✅ 支持安全审核, 日志记录, 模型限速, API Gateway 等高级功能
+> - ✅ 支持推广奖励，专业数据统计，用户画像分析等商业分析能力
+> - ✅ 支持Discord/Telegram/飞书等机器人对接集成能力 (扩展模块)
 > - ...
 >
-> [👉 了解更多](https://chatnio.com/pro)
-> 
+> [👉 了解更多](https://www.chatnio.com/docs/contact)
+
 
 ## 🔨 支持模型
 1. OpenAI & Azure OpenAI *(✅ Vision ✅ Function Calling)*
@@ -93,6 +95,24 @@
 > 1. 点击 `Deploy` 进行部署, 并输入你希望绑定的域名，等待部署完成。
 > 2. 部署完成后, 请访问你的域名, 并使用用户名 `root` 密码 `chatnio123456` 登录后台管理，请按照提示在 chatnio 后台及时修改密码。
 
+### 🐳 宝塔面板 (一键部署)
+
+1. 安装宝塔面板，前往 [宝塔面板官网](https://www.bt.cn/new/download.html) 进行安装，选择正式版脚本安装。
+2. 登录面板，点击左侧 **Docker** 进入 Docker 管理。
+3. 如提示未安装 Docker / Docker Compose， 可根据上方引导安装。
+4. 安装完成后，进入 **应用商城**，搜索 `CoAI` 并点击 **安装**。
+5. 配置应用基本信息，如您的域名，端口等配置，并点击 **确认** (可使用默认配置)。
+6. 首次安装可能需要等待 1-2 分钟完成数据库初始化。如遇到问题，请查看面板运行日志进行排查。
+7. 访问您配置的域名或服务器 `http://[ip]:[port]`，使用用户名 `root` 和密码 `chatnio123456` 登录后台管理。
+
+### 阿里云计算巢 (一键部署)
+ [![Deploy on AlibabaCloud ComputeNest](https://service-info-public.oss-cn-hangzhou.aliyuncs.com/computenest.svg)](https://computenest.console.aliyun.com/service/instance/create/default?type=user&ServiceName=CoAI社区版)
+1. 访问计算巢CoAI[部署链接](https://computenest.console.aliyun.com/service/instance/create/cn-hangzhou?type=user&ServiceName=CoAI社区版)，按提示填写部署参数
+2. 选择付费类型，填写实例参数与网络参数，点击 **确认订单**
+3. 确认部署参数并查看预估价格后，点击立即创建，等待服务实例部署完成
+4. 点击左侧 **服务实例** 等待服务实例部署完成后，点击实例ID进入到详情界面
+5. 点击详情界面**立即使用**中的链接，可进入CoAI社区版界面。默认用户名为`root`，密码`为chatnio123456` 登录后台管理。
+6. 更多操作详情与付费信息，参见：[服务详情](https://computenest.console.aliyun.com/service/detail/cn-hangzhou/service-bfbf676bd89d434691fc/1?type=user&isRecommend=true)
 
 ### ⚡ Docker Compose 安装 (推荐)
 > [!NOTE]
@@ -241,19 +261,6 @@ nohup ./chatnio > output.log & # using nohup to run in background
 - 🍎 后端: Golang + Gin + Redis + MySQL
 - 🍒 应用技术: PWA + WebSocket
 
-## ✨ 优秀开源项目
-> **此处偏前端项目指偏向用户聊天界面的项目, 偏后端项目指偏向于 API 中转和分发的项目, 一站式指包含用户聊天界面和 API 中转和管理的项目*
-- [Next Chat @yidadaa](https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web) （偏前端项目）
-- [Lobe Chat @arvinxx](https://github.com/lobehub/lobe-chat) （偏前端项目）
-- [Chat Box @bin-huang](https://github.com/Bin-Huang/chatbox) （偏前端项目）
-- [OpenAI Forward @kenyony](https://github.com/KenyonY/openai-forward) （偏后端项目）
-- [One API @justsong](https://github.com/songquanpeng/one-api) （偏后端项目）
-- [New API @calon](https://github.com/Calcium-Ion/new-api) （偏后端项目）
-- [FastGPT @labring](https://github.com/labring/FastGPT) （知识库）
-- [Quivr @quivrhq](https://github.com/StanGirard/quivr) （知识库）
-- [Bingo @weaigc](https://github.com/weaigc/bingo) （模型库）
-- [Midjourney Proxy @novicezk](https://github.com/novicezk/midjourney-proxy) （模型库）
-
 ## 🤯 为什么写此项目 & 项目优势
 我们发现，市面上的 AIGC 商业站点，大多数都是偏向于前端轻量部署的项目，有精美的 UI 界面设计，
 比如 [Next Chat](https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web) 的二开商业版本，
@@ -279,4 +286,4 @@ nohup ./chatnio > output.log & # using nohup to run in background
 
 
 ## ❤ 捐助
-如果您觉得这个项目对您有所帮助, 您可以点个 Star 支持一下, 我们不提供捐赠服务！
+如果您觉得这个项目对您有所帮助, 您可以点个 Star 支持一下！
